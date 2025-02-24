@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Product Catalogue API - Documentação
 
 [![NPM](https://img.shields.io/badge/license-MIT-green)](https://github.com/pqmath/product-catalogue-api/blob/main/LICENSE)
@@ -161,6 +161,4 @@ A API está pronta para ser utilizada, contendo 3 categorias e 3 produtos.
 **localhost:8081** `/products/{id}`
 
 **Resposta:** Retorna a página da lista de produtos com uma mensagem confirmando a exclusão do produto
-=======
-# product-catalogue-api
->>>>>>> 782ce2043e92c6af296a6330e201b19a553a31f9
+
