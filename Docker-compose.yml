@@ -1,0 +1,33 @@
+# version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: product_catalogue
+    user: "1000:1000"
+    ports:
+      - "8081:80"
+      - "9443:443"
+    volumes:
+      - ./:/app
+    environment:
+      WEB_DOCUMENT_ROOT: /app/public
+      PHP_MEMORY_LIMIT: 512M
+      PHP_MAX_EXECUTION_TIME: 300
+
+  db:
+    image: postgres:14
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: prova
+      POSTGRES_USER: matthew
+      POSTGRES_PASSWORD: no_password
+    volumes:
+      - pgdata:/var/lib/postgres/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdata:
